@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple socket service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/env php /activities/codes/socket/server.php
+
+[Install]
+WantedBy=multi-user.target
+

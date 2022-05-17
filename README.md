@@ -1,7 +1,13 @@
 
-# useage
+# simple systemd socket service
 
-`ln -sf /activities/codes/socket/rot13.service /etc/systemd/system`
 
-`nc -u 127.0.0.1 10000`
+- add service 
+`ln -sf $(pwd)/simple_socket.service /etc/systemd/system`
+
+- check status and start it
+`systemctl start simple_socket.service`
+`systemctl status simple_socket.service`
+
+`nc -u localhost 12345`
 
